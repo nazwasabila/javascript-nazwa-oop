@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Employee {
+        }
+
+        class Manager extends Employee {
+
+        }
+
+        const nazwa = new Employee();
+        const naeva = new Manager();
+
+        console.info(typeof nazwa);
+        console.info(typeof naeva);
+
+        console.info(nazwa instanceof Employee); // true
+        console.info(nazwa instanceof Manager); // false
+
+        console.info(naeva instanceof Employee); // true
+        console.info(naeva instanceof Manager); // true
+    </script>
+</body>
+</html>2

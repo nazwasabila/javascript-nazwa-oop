@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        class Employee {
+            sayHello(name){
+                console.info(`Hello ${name}, my name is Manager ${this.name}`);
+            }
+        }
+
+        class Manager extends Employee {
+            sayHello(name) {
+                console.info(`Hello ${name}, my name is Manager ${this.name}`);
+            }
+        }
+
+        const naeva = new Employee();
+        naeva.name = "Naeva";
+        naeva.sayHello("sabiru");
+
+        const nazwa = new Manager();
+        nazwa.name = "Nazwa";
+        nazwa.sayHello("sabiru");
+
+        console.info(naeva);
+        console.info(nazwa);
+    </script>
+</body>
+</html>
