@@ -8,33 +8,19 @@
 </head>
 <body>
     <script>
-        function Employee(name) {
-            this.name = name;
+        function Person(firstName, lastName){
+            this.firstName = firstName;
+            this.lastName =  lastName;
+            this.sayHello = function (name) {
+                console.info('Hello ${name}, my name is ${this.firstName}')
+            }
         }
 
-        function Manager(name) {
-            this.name = name;
-        }
+        const nazwa = new Person("Nazwa", "Sabila");
+        const naeva = new  Person("Naeva", "Indria");
 
-        //Manager.prototype = Employe.prototype; salah
-        Manager.prototype = Object.create(Employee.prototype);
-
-        Manager.prototype.sayHello = function (name){
-            console.info(`Hello ${name}, my name is Employee ${this.name}`);
-        }
-        
-        Employee.prototype.sayHello = function (name) {
-            console.info(`Hello ${name}, my name is Employee ${this.name}`);
-        }
-
-        const employee = new Employee("naeva");
-        employee.sayHello("sabiru");
-
-        const manager = new Manager("nazwa");
-        manager.sayHello("sabiru");
-
-        console.info(employee);
-        console.info(manager);
+        console.log(nazwa);
+        console.log(naeva);
     </script>
 </body>
 </html>
